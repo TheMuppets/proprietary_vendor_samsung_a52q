@@ -54,6 +54,7 @@ PRODUCT_PACKAGES += \
     com.samsung.sensor.gc5035 \
     camera.qcom \
     com.samsung.chi.override \
+    libsec2qc_conversion \
     com.qti.eeprom.sec2qcconversion \
     com.samsung.node.smooth_transition \
     com.samsung.node.uniplugin_recording \
