@@ -38,29 +38,19 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/a52q/proprietary/vendor/lib/camera/com.samsung.tuned.lsi_s5kgw1p.bin:$(TARGET_COPY_OUT_VENDOR)/lib/camera/com.samsung.tuned.lsi_s5kgw1p.bin \
     vendor/samsung/a52q/proprietary/vendor/lib/camera/com.samsung.tuned.sony_imx682.bin:$(TARGET_COPY_OUT_VENDOR)/lib/camera/com.samsung.tuned.sony_imx682.bin \
     vendor/samsung/a52q/proprietary/vendor/lib/camera/ois_mcu_stm32g_fw.bin:$(TARGET_COPY_OUT_VENDOR)/lib/camera/ois_mcu_stm32g_fw.bin \
-    vendor/samsung/a52q/proprietary/vendor/lib/camera/uw_dual_calibration.bin:$(TARGET_COPY_OUT_VENDOR)/lib/camera/uw_dual_calibration.bin \
-    vendor/samsung/a52q/proprietary/vendor/lib64/camera/com.samsung.sensormodule.0_0_sony_imx682.bin:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/com.samsung.sensormodule.0_0_sony_imx682.bin \
-    vendor/samsung/a52q/proprietary/vendor/lib64/camera/com.samsung.sensormodule.0_1_lsi_s5kgw1p_otp.bin:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/com.samsung.sensormodule.0_1_lsi_s5kgw1p_otp.bin \
-    vendor/samsung/a52q/proprietary/vendor/lib64/camera/com.samsung.sensormodule.3_lsi_gc5035.bin:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/com.samsung.sensormodule.3_lsi_gc5035.bin \
-    vendor/samsung/a52q/proprietary/vendor/lib64/camera/com.samsung.sensormodule.4_0_lsi_gc5035_macro.bin:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/com.samsung.sensormodule.4_0_lsi_gc5035_macro.bin \
-    vendor/samsung/a52q/proprietary/vendor/lib64/camera/com.samsung.sensormodule.4_1_lsi_dv_gc5035_macro_hw_2.bin:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/com.samsung.sensormodule.4_1_lsi_dv_gc5035_macro_hw_2.bin \
-    vendor/samsung/a52q/proprietary/vendor/lib64/camera/com.samsung.tuned.hynix_hi1336.bin:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/com.samsung.tuned.hynix_hi1336.bin \
-    vendor/samsung/a52q/proprietary/vendor/lib64/camera/com.samsung.tuned.lsi_gc5035.bin:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/com.samsung.tuned.lsi_gc5035.bin \
-    vendor/samsung/a52q/proprietary/vendor/lib64/camera/com.samsung.tuned.lsi_s5k3l6.bin:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/com.samsung.tuned.lsi_s5k3l6.bin \
-    vendor/samsung/a52q/proprietary/vendor/lib64/camera/com.samsung.tuned.lsi_s5kgw1p.bin:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/com.samsung.tuned.lsi_s5kgw1p.bin \
-    vendor/samsung/a52q/proprietary/vendor/lib64/camera/com.samsung.tuned.sony_imx682.bin:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/com.samsung.tuned.sony_imx682.bin
+    vendor/samsung/a52q/proprietary/vendor/lib/camera/uw_dual_calibration.bin:$(TARGET_COPY_OUT_VENDOR)/lib/camera/uw_dual_calibration.bin
 
 PRODUCT_PACKAGES += \
-    com.samsung.sensor.gc5035 \
-    camera.qcom \
-    com.samsung.chi.override \
-    libsec2qc_conversion \
     com.qti.eeprom.sec2qcconversion \
+    com.samsung.sensor.gc5035 \
     com.samsung.node.smooth_transition \
     com.samsung.node.uniplugin_recording \
     com.samsung.node.uniplugin_vdis \
     com.wrapper.stats.aec \
+    camera.qcom \
+    com.samsung.chi.override \
     libSNPE \
+    libsec2qc_conversion \
     libsnpe_dsp_domains_v2 \
     libsnpe_wrapper \
     libbauthserver \

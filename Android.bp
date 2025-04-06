@@ -15,93 +15,6 @@ soong_namespace {
 }
 
 cc_prebuilt_library_shared {
-	name: "com.samsung.sensor.gc5035",
-	owner: "samsung",
-	strip: {
-		none: true,
-	},
-	target: {
-		android_arm: {
-			srcs: ["proprietary/vendor/lib/camera/com.samsung.sensor.gc5035.so"],
-			shared_libs: ["libc++", "libcutils", "liblog", "libc", "libm", "libdl", ],
-		},
-		android_arm64: {
-			srcs: ["proprietary/vendor/lib64/camera/com.samsung.sensor.gc5035.so"],
-			shared_libs: ["libc++", "libcutils", "liblog", "libc", "libm", "libdl", ],
-		},
-	},
-	compile_multilib: "both",
-	relative_install_path: "camera",
-	prefer: true,
-	soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-	name: "camera.qcom",
-	owner: "samsung",
-	strip: {
-		none: true,
-	},
-	target: {
-		android_arm: {
-			srcs: ["proprietary/vendor/lib/hw/camera.qcom.so"],
-			shared_libs: ["libc++", "libcutils", "liblog", "libcdsprpc", "libqdMetaData", "libsnsapi", "libqmi_common_so", "libqmi_cci", "libqmi_encdec", "libprotobuf-cpp-full-3.9.1-vendorcompat", "libhardware", "libcamera_metadata", "libcamxfdengine", "libcamxstatscore", "libsync", "libz", "libdl", "libc", "libm", ],
-		},
-		android_arm64: {
-			srcs: ["proprietary/vendor/lib64/hw/camera.qcom.so"],
-			shared_libs: ["libc++", "libcutils", "liblog", "libcdsprpc", "libqdMetaData", "libsnsapi", "libqmi_common_so", "libqmi_cci", "libqmi_encdec", "libprotobuf-cpp-full-3.9.1-vendorcompat", "libhardware", "libcamera_metadata", "libcamxfdengine", "libcamxstatscore", "libsync", "libz", "libdl", "libc", "libm", ],
-		},
-	},
-	compile_multilib: "both",
-	relative_install_path: "hw",
-	prefer: true,
-	soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-	name: "com.samsung.chi.override",
-	owner: "samsung",
-	strip: {
-		none: true,
-	},
-	target: {
-		android_arm: {
-			srcs: ["proprietary/vendor/lib/hw/com.samsung.chi.override.so"],
-			shared_libs: ["libc++", "libcutils", "liblog", "libcamera_metadata", "libhardware", "libutils", "libsync", "libuniplugin", "libc", "libm", "libdl", ],
-		},
-		android_arm64: {
-			srcs: ["proprietary/vendor/lib64/hw/com.samsung.chi.override.so"],
-			shared_libs: ["libc++", "libcutils", "liblog", "libcamera_metadata", "libhardware", "libutils", "libsync", "libuniplugin", "libc", "libm", "libdl", ],
-		},
-	},
-	compile_multilib: "both",
-	relative_install_path: "hw",
-	prefer: true,
-	soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-	name: "libsec2qc_conversion",
-	owner: "samsung",
-	strip: {
-		none: true,
-	},
-	target: {
-		android_arm: {
-			srcs: ["proprietary/vendor/lib/libsec2qc_conversion.so"],
-			shared_libs: ["liblog", "libm", "libdl", "libc", ],
-		},
-		android_arm64: {
-			srcs: ["proprietary/vendor/lib64/libsec2qc_conversion.so"],
-			shared_libs: ["liblog", "libm", "libdl", "libc", ],
-		},
-	},
-	compile_multilib: "both",
-	prefer: true,
-	soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
 	name: "com.qti.eeprom.sec2qcconversion",
 	owner: "samsung",
 	strip: {
@@ -110,6 +23,24 @@ cc_prebuilt_library_shared {
 	target: {
 		android_arm: {
 			srcs: ["proprietary/vendor/lib/camera/com.qti.eeprom.sec2qcconversion.so"],
+			shared_libs: ["libc++", "libcutils", "liblog", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "32",
+	relative_install_path: "camera",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "com.samsung.sensor.gc5035",
+	owner: "samsung",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/camera/com.samsung.sensor.gc5035.so"],
 			shared_libs: ["libc++", "libcutils", "liblog", "libc", "libm", "libdl", ],
 		},
 	},
@@ -192,6 +123,42 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+	name: "camera.qcom",
+	owner: "samsung",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/hw/camera.qcom.so"],
+			shared_libs: ["libc++", "libcutils", "liblog", "libcdsprpc", "libqdMetaData", "libsnsapi", "libqmi_common_so", "libqmi_cci", "libqmi_encdec", "libprotobuf-cpp-full-3.9.1-vendorcompat", "libhardware", "libcamera_metadata", "libcamxfdengine", "libcamxstatscore", "libsync", "libz", "libdl", "libc", "libm", ],
+		},
+	},
+	compile_multilib: "32",
+	relative_install_path: "hw",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "com.samsung.chi.override",
+	owner: "samsung",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/hw/com.samsung.chi.override.so"],
+			shared_libs: ["libc++", "libcutils", "liblog", "libcamera_metadata", "libhardware", "libutils", "libsync", "libuniplugin", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "32",
+	relative_install_path: "hw",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
 	name: "libSNPE",
 	owner: "samsung",
 	strip: {
@@ -201,6 +168,23 @@ cc_prebuilt_library_shared {
 		android_arm: {
 			srcs: ["proprietary/vendor/lib/libSNPE.so"],
 			shared_libs: ["libdl", "liblog", "libc++_shared", "libc", "libm", ],
+		},
+	},
+	compile_multilib: "32",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "libsec2qc_conversion",
+	owner: "samsung",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/libsec2qc_conversion.so"],
+			shared_libs: ["liblog", "libm", "libdl", "libc", ],
 		},
 	},
 	compile_multilib: "32",
